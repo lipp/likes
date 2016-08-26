@@ -5,6 +5,12 @@ __NO TOKENS REQUIRED__
 
 [![API Doc](https://doclets.io/lipp/likes/master.svg)](https://doclets.io/lipp/likes/master) [![Build Status](https://travis-ci.org/lipp/likes.svg?branch=master)](https://travis-ci.org/lipp/likes) [![Coverage Status](https://coveralls.io/repos/github/lipp/likes/badge.svg?branch=master)](https://coveralls.io/github/lipp/likes?branch=master)
 
+Available for: 
+- Facebook
+- Twitter
+- Instagram
+- Youtube
+
 # Installation
 
     $ npm install likes
@@ -24,13 +30,6 @@ likes.twitter('BarackObama', function (err, count) {
 
 
 ```
-
-# Support social media platforms
-
-- Facebook
-- Twitter
-- Instagram
-- Youtube
 
 # API
 
