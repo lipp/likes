@@ -1,0 +1,52 @@
+{
+  "name": "likes",
+  "description": "Easily query social media likes / followers without tokens (for node)",
+  "url": "https://github.com/lipp/likes",
+  "keywords": [
+    "social",
+    "media",
+    "likes",
+    "followers",
+    "youtube",
+    "instagram",
+    "facebook",
+    "twitter"
+  ],
+  "author": "Gerhard Preuss <gelipp@gmail.com>",
+  "contributors": [
+    {
+      "name": "Gerhard Preuss",
+      "email": "gelipp@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "coveralls": "2.11.6",
+    "istanbul": "0.4.2",
+    "mocha": "2.3.4",
+    "standard": "^8.0.0",
+    "standard-format": "^2.2.3"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.74.0"
+  },
+  "main": "./index.js",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lipp/likes"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && istanbul cover _mocha -- --recursive test",
+    "test_nocover": "mocha  test"
+  },
+  "engines": {
+    "node": ">0.8.0"
+  },
+  "homepage": "https://github.com/lipp/likes",
+  "bugs": {
+    "url": "http://github.com/lipp/likes/issues",
+    "email": "gelipp@gmail.com"
+  }
+}
