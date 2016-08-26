@@ -23,15 +23,17 @@ var getProfile = module.exports._getProfile = function (conf, done) {
 }
 
 /**
+ * The callback function for each query method.
  * @typdef {function} doneCallback
  * @param {Error} error Set in case of any error
  * @param {Number} count The number of likes/followers
  */
 
 /**
- * @function twitter
- *
  * Queries a user's follower number
+ *
+ * @function
+ * @name twitter
  * @param {string} The user id (without "@")
  * @param {doneCallback} done The classic done callback
  */
@@ -48,9 +50,10 @@ module.exports.twitter = function (id, done) {
 }
 
 /**
- * @function facebook
- *
  * Queries a user's / object's / page's likes number
+ *
+ * @function
+ * @name facebook
  * @param {string} The user / object / page id
  * @param {doneCallback} done The classic done callback
  */
@@ -67,9 +70,10 @@ module.exports.facebook = function (id, done) {
 }
 
 /**
- * @function twitter
- *
  * Queries a user's follower number
+ *
+ * @function
+ * @name twitter
  * @param {string} The user id (without "@")
  * @param {doneCallback} done The classic done callback
  */
@@ -84,9 +88,10 @@ module.exports.instagram = function (id, done) {
 }
 
 /**
- * @function youtube
- *
  * Queries a user's subscriber number
+ *
+ * @function
+ * @name youtube
  * @param {string} The user id (without "@")
  * @param {doneCallback} done The classic done callback
  */
