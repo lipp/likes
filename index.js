@@ -23,7 +23,8 @@ var getProfile = module.exports._getProfile = function (conf, done) {
 }
 
 /**
- * @typdef {function} doneCallback
+ * The callback function for each query method.
+ * @callback doneCallback
  * @param {Error} error Set in case of any error
  * @param {Number} count The number of likes/followers
  */
