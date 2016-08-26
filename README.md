@@ -25,7 +25,7 @@ likes.twitter('BarackObama', function (err, count) {
 
 ```
 
-# support social media platforms
+# Support social media platforms
 
 - Facebook
 - Twitter
