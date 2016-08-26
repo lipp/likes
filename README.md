@@ -3,7 +3,7 @@ Easily query social media likes/followers without tokens (for node).
 
 __NO TOKENS REQUIRED__
 
-[![API Doc](https://doclets.io/lipp/likes/master.svg)](https://doclets.io/lipp/likes/master) [![Build Status](https://travis-ci.org/lipp/likes.svg?branch=master)](https://travis-ci.org/lipp/likes) 
+[![API Doc](https://doclets.io/lipp/likes/master.svg)](https://doclets.io/lipp/likes/master) [![Build Status](https://travis-ci.org/lipp/likes.svg?branch=master)](https://travis-ci.org/lipp/likes) [![Coverage Status](https://coveralls.io/repos/github/lipp/likes/badge.svg?branch=master)](https://coveralls.io/github/lipp/likes?branch=master)
 
 # Installation
 
