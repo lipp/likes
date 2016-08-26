@@ -23,17 +23,17 @@ var getProfile = module.exports._getProfile = function (conf, done) {
 }
 
 /**
- * @callback done
+ * @typdef {function} doneCallback
  * @param {Error} error Set in case of any error
  * @param {Number} count The number of likes/followers
  */
 
 /**
  * @function twitter
- * @param {string} The user id (without "@")
- * @param {done} The classic done callback
  *
  * Queries a user's follower number
+ * @param {string} The user id (without "@")
+ * @param {doneCallback} done The classic done callback
  */
 module.exports.twitter = function (id, done) {
   getProfile({
@@ -49,10 +49,10 @@ module.exports.twitter = function (id, done) {
 
 /**
  * @function facebook
- * @param {string} The user / object / page id
- * @param {done} The classic done callback
  *
  * Queries a user's / object's / page's likes number
+ * @param {string} The user / object / page id
+ * @param {doneCallback} done The classic done callback
  */
 module.exports.facebook = function (id, done) {
   getProfile({
@@ -68,10 +68,10 @@ module.exports.facebook = function (id, done) {
 
 /**
  * @function twitter
- * @param {string} The user id (without "@")
- * @param {done} The classic done callback
  *
  * Queries a user's follower number
+ * @param {string} The user id (without "@")
+ * @param {doneCallback} done The classic done callback
  */
 module.exports.instagram = function (id, done) {
   getProfile({
@@ -85,10 +85,10 @@ module.exports.instagram = function (id, done) {
 
 /**
  * @function youtube
- * @param {string} The user id (without "@")
- * @param {done} The classic done callback
  *
  * Queries a user's subscriber number
+ * @param {string} The user id (without "@")
+ * @param {doneCallback} done The classic done callback
  */
 module.exports.youtube = function (id, done) {
   getProfile({

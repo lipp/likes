@@ -3,6 +3,8 @@ Easily query social media likes/followers without tokens (for node).
 
 __NO TOKENS REQUIRED__
 
+[![API Doc](https://doclets.io/lipp/likes/master.svg)](https://doclets.io/lipp/likes/master) [![Build Status](https://travis-ci.org/lipp/likes.svg?branch=master)](https://travis-ci.org/lipp/likes) 
+
 # Installation
 
     $ npm install likes
@@ -29,6 +31,10 @@ likes.twitter('BarackObama', function (err, count) {
 - Twitter
 - Instagram
 - Youtube
+
+# API
+
+[![API Doc](https://doclets.io/lipp/likes/master.svg)](https://doclets.io/lipp/likes/master)
 
 # How it works
 
