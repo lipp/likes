@@ -73,7 +73,7 @@ module.exports.facebook = function (id, done) {
  * Queries a user's follower number
  *
  * @function
- * @name twitter
+ * @name instagram
  * @param {string} id The user id (without "@")
  * @param {doneCallback} done The classic done callback
  */
