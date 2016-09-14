@@ -44,7 +44,7 @@ module.exports.twitter = function (id, done) {
       var selector = '.ProfileNav-item--followers a'
       var description = cheerio.load(body)(selector).attr('title')
       var likesText = description.match(/([0-9,\.]+)\s/)[1]
-      return parseInt(likesText.replace(/[\.,\s]/g, ''))
+      return parseInt(likesText.replace(/[\.,\s]/g, ''), 10)
     }
   }, done)
 }
@@ -64,7 +64,26 @@ module.exports.facebook = function (id, done) {
       var selector = 'meta[name="description"]'
       var description = cheerio.load(body)(selector).attr('content')
       var likesText = description.match(/[^0-9]+\s([0-9,\.]+)\s/)[1]
-      return parseInt(likesText.replace(/[\.,\s]/g, ''))
+      return parseInt(likesText.replace(/[\.,\s]/g, ''), 10)
+    }
+  }, done)
+}
+
+/**
+ * Queries a user's / object's / page's likes number
+ *
+ * @function
+ * @name pinterest
+ * @param {string} id The user / object / page id
+ * @param {doneCallback} done The classic done callback
+ */
+module.exports.pinterest = function (id, done) {
+  getProfile({
+    url: 'https://www.pinterest.com/' + id + '/followers',
+    extractLikes: function (body) {
+      var selector = 'meta[name="pinterestapp:followers"]'
+      var description = cheerio.load(body)(selector).attr('content')
+      return parseInt(description, 10)
     }
   }, done)
 }
@@ -82,7 +101,7 @@ module.exports.instagram = function (id, done) {
     url: 'https://www.instagram.com/' + id,
     extractLikes: function (body) {
       var description = body.match(/"followed_by":\s*\{"count":\s*([0-9]+)/)[1]
-      return parseInt(description.replace(/[\.,\s]/g, ''))
+      return parseInt(description.replace(/[\.,\s]/g, ''), 10)
     }
   }, done)
 }
@@ -102,7 +121,7 @@ module.exports.youtube = function (id, done) {
       var selector = '.subscribed'
       var description = cheerio.load(body)(selector).text()
       var likesText = description.match(/([0-9,\.]+)/)[1]
-      return parseInt(likesText.replace(/[\.,\s]/g, ''))
+      return parseInt(likesText.replace(/[\.,\s]/g, ''), 10)
     }
   }, done)
 }

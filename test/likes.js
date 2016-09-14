@@ -26,6 +26,13 @@ describe('likes', function () {
     })
   })
 
+  it('pinterest', function (done) {
+    likes.pinterest('asphaltgold', function (err, count) {
+      assert.ok(count > 1800)
+      done(err)
+    })
+  })
+
   it('youtube', function (done) {
     likes.youtube('DieLochis', function (err, count) {
       assert.ok(count > 1000000)
