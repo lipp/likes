@@ -26,6 +26,20 @@ describe('likes', function () {
     })
   })
 
+  it('pinterest', function (done) {
+    likes.pinterest('asphaltgold', function (err, count) {
+      assert.ok(count > 1800)
+      done(err)
+    })
+  })
+
+  it('googleplus', function (done) {
+    likes.googleplus('115096680403823509178', function (err, count) {
+      assert.ok(count > 1200)
+      done(err)
+    })
+  })
+
   it('youtube', function (done) {
     likes.youtube('DieLochis', function (err, count) {
       assert.ok(count > 1000000)
