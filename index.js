@@ -89,6 +89,25 @@ module.exports.pinterest = function (id, done) {
 }
 
 /**
+ * Queries a user's / object's / page's likes number
+ *
+ * @function
+ * @name googleplus
+ * @param {string} id The user / object / page id
+ * @param {doneCallback} done The classic done callback
+ */
+module.exports.googleplus = function (id, done) {
+  getProfile({
+    url: 'https://plus.google.com/' + id,
+    extractLikes: function (body) {
+      var selector = 'div[token="' + id + '/posts"] > div:first-child > div:first-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:first-child > span:first-child'
+      var description = cheerio.load(body)(selector).text()
+      return parseInt(description.replace(/[\.,]/g, ''), 10)
+    }
+  }, done)
+}
+
+/**
  * Queries a user's follower number
  *
  * @function
