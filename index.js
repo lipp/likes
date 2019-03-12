@@ -119,8 +119,10 @@ module.exports.instagram = function (id, done) {
   getProfile({
     url: 'https://www.instagram.com/' + id,
     extractLikes: function (body) {
-      var description = body.match(/"followed_by":\s*\{"count":\s*([0-9]+)/)[1]
-      return parseInt(description.replace(/[\.,\s]/g, ''), 10)
+      var selector = 'meta[name="description"]'
+      var description = cheerio.load(body)(selector).attr('content')
+      var likesText = description.match(/([0-9\.]+)\s/)[1]
+      return parseInt(likesText.replace(/[\.,\s]/g, ''))
     }
   }, done)
 }
